@@ -1,0 +1,163 @@
+
+String "MyBarTextTemplate" {
+   //FontColor 0.99 0.427 0.0705 1.0, //Red Green Blue Alpha 0.0 to 1.0
+   FontColor 1.0 1.0 1.0 1.0,
+   FontShadowColor 0.0 0.0 0.0 0.9,
+   FontShadowOffset 0.001 -0.001,
+   Font "MasterFont", 0.01, //MasterFont is only valid with "DecorateFileNames,"
+}
+Frame "SIMPLESTATUSBAR" "MyBarEx" {
+   Width 0.07, //Default Width
+   Height 0.012, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor00.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MyBarExBackground"{ //the BACKGROUND Texture named "MyBarExBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MyBarExBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MyBarExFrame" { //Child of "MyBarEx"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MyBarEx"
+       Layer "ARTWORK" {
+           Texture "MyBarExBorder" {
+               File "SimpleXpBarBorder", //Default Texture for "MyBarExBorder"
+           }
+           String "MyBarExText" INHERITS "MyBarTextTemplate" {
+               Text "MyBarEx", //Default Text for "MyBarExText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MyBar" {
+   Width 0.07,
+   Height 0.012,
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor00.blp",
+   Layer "BACKGROUND" {
+       Texture "MyBarBackground" {
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp",
+       }
+   }
+   Frame "SIMPLEFRAME" "MyBarFrame" {
+       SetAllPoints,
+       DecorateFileNames,
+       Layer "ARTWORK" {
+           String "MyBarText" INHERITS "MyBarTextTemplate" {
+               Text "MyBar",
+           }
+       }
+   }
+}
+Frame "SIMPLESTATUSBAR" "MySimpleBar" {
+   Width 0.07,
+   Height 0.012,
+}
+
+Frame "SIMPLESTATUSBAR" "MyPortraitBar" {
+   Width 0.04,
+   Height 0.04,
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor00.blp",
+   Layer "BACKGROUND" {
+       Texture "MyPortraitBarBackground" {
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp",
+       }
+   }
+   Frame "SIMPLEFRAME" "MyPortraitBarFrame" {
+       SetAllPoints,
+       DecorateFileNames,
+       Layer "ARTWORK" {
+           String "MyPortraitBarText" INHERITS "MyBarTextTemplate" {
+               Text "MyPortraitBar",
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MyLevelBar" {
+   Width 0.3, //Default Width
+   Height 0.02, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor03.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MyLevelBarBackground"{ //the BACKGROUND Texture named "MyLevelBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MyLevelBarBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MyLevelBarFrame" { //Child of "MyLevelBar"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MyLevelBar"
+       Layer "ARTWORK" {
+           Texture "MyLevelBarBorder" {
+               File "SimpleXpBarBorder", //Default Texture for "MyLevelBarBorder"
+           }
+           String "MyLevelBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MyLevelBarText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MyHPBar" {
+   Width 0.3, //Default Width
+   Height 0.02, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor06.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MyHPBarBackground"{ //the BACKGROUND Texture named "MyHPBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MyHPBarBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MyHPBarFrame" { //Child of "MyHPBar"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MyHPBar"
+       Layer "ARTWORK" {
+           Texture "MyHPBarBorder" {
+               File "SimpleXpBarBorder", //Default Texture for "MyHPBarBorder"
+           }
+           String "MyHPBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MyHPBarText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MyMPBar" {
+   Width 0.3, //Default Width
+   Height 0.02, //Default Height
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor01.blp", //Default BarTexture
+   Layer "BACKGROUND" { //A simpleFrames thing, where this is placed layer wise
+       Texture "MyMPBarBackground"{ //the BACKGROUND Texture named "MyMPBarBackground" its also a frame and a child
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp", //Default Texture for "MyMPBarBackground"
+       }
+   }
+   Frame "SIMPLEFRAME" "MyMPBarFrame" { //Child of "MyMPBar"
+       DecorateFileNames, //Lookup FileNames in a StringList
+       SetAllPoints, //copy "MyMPBar"
+       Layer "ARTWORK" {
+           Texture "MyMPBarBorder" {
+               File "SimpleXpBarBorder", //Default Texture for "MyMPBarBorder"
+           }
+           String "MyMPBarText" INHERITS "MyBarTextTemplate" {
+               Text "", //Default Text for "MyMPBarText" which takes over Data from "MyBarTextTemplate"
+           }
+       }
+   }
+}
+
+Frame "SIMPLESTATUSBAR" "MyAbilityIconBar" {
+   Width 0.04,
+   Height 0.04,
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor10.blp",
+   Layer "BACKGROUND" {
+       Texture "MyAbilityIconBarBackground" {
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp",
+       }
+   }
+   Frame "SIMPLEFRAME" "MyAbilityIconBarFrame" {
+       SetAllPoints,
+       DecorateFileNames,
+       Layer "ARTWORK" {
+           String "MyAbilityIconBarText" INHERITS "MyBarTextTemplate" {
+               Text "",
+           }
+       }
+   }
+}
