@@ -716,6 +716,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hit.PURE_PROGRESS,
     ]],
 
+    // shouto todoroki
+    [FourCC(""), [
+      AbilityNames.ShoutoTodoroki.GLACIER,
+      AbilityNames.ShoutoTodoroki.WALL_OF_FLAMES,
+      AbilityNames.ShoutoTodoroki.ICE_PATH,
+      AbilityNames.ShoutoTodoroki.FLASHFREEZE_HEATWAVE,
+      AbilityNames.ShoutoTodoroki.HEATING_UP_COOLING_OFF,
+    ]],
+
     // androids 13 14 15
     [Id.rustTyranno, [
       AbilityNames.RustTyranno.TYRANNO_FLAME,
